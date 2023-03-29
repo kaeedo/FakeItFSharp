@@ -1,5 +1,5 @@
 ﻿type IDatabase =
-    abstract member Save: (int * string) -> unit
+    abstract member Save: wef:(int * string) -> unit
     
 type Database() =
     interface IDatabase with
@@ -24,4 +24,4 @@ let myService = new MyService(db) :> IMyService
 
 let response = myService.DoThing 1
 
-printfn $"Response is: '%s{response}'"
+//printfn $"Response is: '%s{response}'"
